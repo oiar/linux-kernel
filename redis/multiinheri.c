@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stddef.h>
 
-#define CustomTransfer(a) ((_customObject*)(((char*)a) - offsetof(_customObject,obj_T)))
+#define CustomTransfer(a) ((_customObject*)(((char*)a) - offsetof(_customObject, obj_T)))
 
 typedef struct parentObject {
   int count;
