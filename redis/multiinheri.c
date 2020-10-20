@@ -5,7 +5,7 @@
 
 typedef struct parentObject {
   int count;
-} parentObject ;
+} parentObject;
 
 int ref(struct parentObject *obj) {
   return obj->count;
