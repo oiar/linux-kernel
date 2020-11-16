@@ -27,8 +27,8 @@ int main() {
   a.list.next = &b.list;
   b.list.prev = &a.list;
 
-  int o = (int)(&((struct devices*)0)->list);
-  devices * actualBAddress = (devices*)((char *)a.list.next - o);
+  unsigned long o = (unsigned long)(&((struct devices*)0)->list); // 计算偏移量
+  devices * actualBAddress = (devices*)((char *)a.list.next - o); // 解决不同类型不同步长的问题，char 类型是 1 字节
 
   printf("%p\n", &b);
   printf("%p\n", actualBAddress);
